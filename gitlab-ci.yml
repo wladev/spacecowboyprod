@@ -1,0 +1,41 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  APP_NAME: "spacecowboyprod"
+  IMAGE_NAME: "spacecowboyprod"
+  CONTAINER_PORT: "3004"
+  WORK_DIR: "/var/www/${APP_NAME}"
+
+build:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:dind
+  script:
+    - echo "🧱 Build de l'image Docker"
+    - docker build -t $IMAGE_NAME .
+    - docker save $IMAGE_NAME > ${IMAGE_NAME}.tar
+  artifacts:
+    paths:
+      - ${IMAGE_NAME}.tar
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache openssh-client
+    - mkdir -p ~/.ssh
+    - echo "$VPS_SSH_KEY" > ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+    - ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
+  script:
+    - echo "🚀 Déploiement sur le VPS"
+    - scp ${IMAGE_NAME}.tar ${VPS_USER}@${VPS_HOST}:/tmp/
+    - ssh ${VPS_USER}@${VPS_HOST} "
+        docker load -i /tmp/${IMAGE_NAME}.tar &&
+        mkdir -p ${WORK_DIR} &&
+        cd ${WORK_DIR} &&
+        docker-compose down &&
+        docker-compose up -d"
