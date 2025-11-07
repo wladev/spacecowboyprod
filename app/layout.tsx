@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "Mon Appli",
+  title: "Space Cowboy Productions",
+  description: "Official website of Space Cowboy Productions",
 };
 
 export default function RootLayout({
