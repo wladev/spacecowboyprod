@@ -33,7 +33,7 @@ deploy:
     - ssh-keyscan -p $VPS_PORT -H "$VPS_HOST" >> ~/.ssh/known_hosts
   script:
     - echo "🚀 Déploiement sur le VPS"
-    - scp -p $VPS_PORT ${IMAGE_NAME}.tar deploy@${VPS_HOST}:/tmp/
+    - scp -P $VPS_PORT ${IMAGE_NAME}.tar deploy@${VPS_HOST}:/tmp/
     - ssh -p $VPS_PORT deploy@${VPS_HOST} "
         docker load -i /tmp/${IMAGE_NAME}.tar &&
         mkdir -p ${WORK_DIR} &&
