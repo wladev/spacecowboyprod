@@ -25,17 +25,20 @@ export default function Header() {
     <header className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-primary/95 backdrop-blur-md py-3 shadow-lg' : 'py-6'}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl lg:text-3xl font-bold text-white hover:opacity-90 transition-opacity z-50">
-            Space Cowboy <span className="text-highlight">Production</span>
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity z-50">
+            {/* <img src="/images/logo.png" alt="Space Cowboy Production" className="h-12 lg:h-14 w-auto" /> */}
+            <span className="text-xl lg:text-2xl font-bold text-white">
+              Space Cowboy <span className="text-highlight">Production</span>
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <ul className="flex items-center space-x-6 lg:space-x-10">
-              <li><Link href="#portfolio" className="text-white text-base lg:text-lg hover:text-highlight transition-colors font-medium">Portfolio</Link></li>
-              <li><Link href="#services" className="text-white text-base lg:text-lg hover:text-highlight transition-colors font-medium">Services</Link></li>
-              <li><Link href="#about" className="text-white text-base lg:text-lg hover:text-highlight transition-colors font-medium">À propos</Link></li>
-              <li><Link href="#contact" className="bg-highlight text-white px-6 py-2.5 rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 font-semibold">Contact</Link></li>
+            <ul className="flex items-center ">
+              <li><Link href="#portfolio" className="me-5 text-white text-base lg:text-lg hover:text-highlight transition-colors font-medium">Portfolio</Link></li>
+              <li><Link href="#services" className="me-5 text-white text-base lg:text-lg hover:text-highlight transition-colors font-medium">Services</Link></li>
+              <li><Link href="#about" className="me-5 text-white text-base lg:text-lg hover:text-highlight transition-colors font-medium">À propos</Link></li>
+              <li><Link href="#contact" className="me-5 bg-highlight text-white px-6 py-2.5 rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 font-semibold">Contact</Link></li>
             </ul>
           </nav>
 

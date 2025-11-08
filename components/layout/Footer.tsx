@@ -8,10 +8,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Space Cowboy <span className="text-highlight">Production</span>
-            </h3>
-            <p className="mb-6">
+            <div className="flex items-center gap-4 mb-6">
+              <img src="/images/logo.png" alt="Space Cowboy Production" className="h-14 w-auto" />
+              <h3 className="text-2xl font-bold text-white">
+                Space Cowboy <span className="text-highlight">Production</span>
+              </h3>
+            </div>
+            <p className="mb-6 text-gray-400">
               Création de contenu vidéo d'exception, propulsé par l'IA et sublimé par l'expertise humaine.
             </p>
             <div className="flex space-x-4">

@@ -49,7 +49,9 @@ export default function Hero() {
 
       {/* Contenu du héros */}
       <div className="relative z-10 text-center px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <img src="/images/logo.png" alt="Space Cowboy Production" className="h-60  w-auto mx-auto mt-60" />
+
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 mt-10 leading-tight">
           Des vidéos qui racontent votre histoire
         </h1>
         <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-12 leading-relaxed max-w-3xl mx-auto">
