@@ -19,7 +19,7 @@ export default function Contact() {
 
         <div className="bg-[#1a1a2e] rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="bg-primary text-white p-6 sm:p-10 md:p-12 lg:p-16 xl:p-20">
+            <div className="bg-primary text-white p-6 sm:p-10 md:p-12 lg:p-16 xl:p-20 overflow-hidden">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8">Informations de contact</h3>
               
               <div className="space-y-6 sm:space-y-8">
@@ -30,9 +30,9 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <div className="ml-3 sm:ml-4">
+                  <div className="ml-3 sm:ml-4 overflow-hidden">
                     <h4 className="font-semibold text-sm sm:text-base">Adresse</h4>
-                    <p className="text-primary-100 text-sm sm:text-base">123 Rue de la Création<br />75000 Paris, France</p>
+                    <p className="text-primary-100 text-sm sm:text-base break-words">123 Rue de la Création<br />75000 Paris, France</p>
                   </div>
                 </div>
 
@@ -42,9 +42,9 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <div className="ml-3 sm:ml-4">
+                  <div className="ml-3 sm:ml-4 overflow-hidden">
                     <h4 className="font-semibold text-sm sm:text-base">Téléphone</h4>
-                    <p className="text-primary-100 text-sm sm:text-base">+33 1 23 45 67 89</p>
+                    <p className="text-primary-100 text-sm sm:text-base break-words">+33 1 23 45 67 89</p>
                   </div>
                 </div>
 
@@ -54,9 +54,9 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div className="ml-3 sm:ml-4">
+                  <div className="ml-3 sm:ml-4 overflow-hidden">
                     <h4 className="font-semibold text-sm sm:text-base">Email</h4>
-                    <p className="text-primary-100 text-sm sm:text-base">contact@spacecowboyprod.com</p>
+                    <p className="text-primary-100 text-sm sm:text-base break-all">contact@spacecowboyprod.com</p>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-6 sm:p-10 md:p-12 lg:p-16 xl:p-20 bg-[#16213e]">
+            <div className="p-6 sm:p-10 md:p-12 lg:p-16 xl:p-20 bg-[#16213e] overflow-hidden">
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 md:space-y-10">
                 <div>
                   <label htmlFor="name" className="block text-sm sm:text-base md:text-lg font-semibold text-gray-200 mb-2 sm:mb-3">
