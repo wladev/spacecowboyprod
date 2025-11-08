@@ -5,19 +5,19 @@ export default function Footer() {
   
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-4 mb-6">
-              <img src="/images/logo.png" alt="Space Cowboy Production" className="h-14 w-auto" />
-              <h3 className="text-2xl font-bold text-white">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <img src="/images/logo.png" alt="Space Cowboy Production" className="h-10 sm:h-12 md:h-14 w-auto" />
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
                 Space Cowboy <span className="text-highlight">Production</span>
               </h3>
             </div>
-            <p className="mb-6 text-gray-400">
+            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-400">
               Création de contenu vidéo d'exception, propulsé par l'IA et sublimé par l'expertise humaine.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               {['facebook', 'instagram', 'linkedin', 'youtube'].map((platform) => (
                 <a 
                   key={platform}
@@ -26,15 +26,15 @@ export default function Footer() {
                   aria-label={platform}
                 >
                   <span className="sr-only">{platform}</span>
-                  <div className="w-5 h-5" dangerouslySetInnerHTML={{ __html: getSocialIcon(platform) }} />
+                  <div className="w-5 h-5 sm:w-6 sm:h-6" dangerouslySetInnerHTML={{ __html: getSocialIcon(platform) }} />
                 </a>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Liens rapides</h4>
-            <ul className="space-y-2">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Liens rapides</h4>
+            <ul className="space-y-2 text-sm sm:text-base">
               {[
                 { name: 'Accueil', href: '#' },
                 { name: 'Portfolio', href: '#portfolio' },
@@ -52,8 +52,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
+            <ul className="space-y-2 text-sm sm:text-base">
               {[
                 'Vidéos d\'entreprise',
                 'Documentaires',
@@ -62,7 +62,7 @@ export default function Footer() {
                 'Post-production',
               ].map((service) => (
                 <li key={service} className="flex items-center">
-                  <svg className="w-4 h-4 text-highlight mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 text-highlight mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                   </svg>
                   <span className="hover:text-white transition-colors cursor-pointer">{service}</span>
@@ -72,11 +72,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">
+        <div className="border-t border-gray-800 mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs sm:text-sm text-gray-500 text-center md:text-left">
             &copy; {currentYear} Space Cowboy Production. Tous droits réservés.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link href="/mentions-legales" className="text-sm text-gray-500 hover:text-white transition-colors">
               Mentions légales
             </Link>

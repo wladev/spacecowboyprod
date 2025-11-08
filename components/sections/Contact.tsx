@@ -8,62 +8,62 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 lg:py-40 bg-[#0a0a0a]">
-      <div className="container mx-auto px-8 lg:px-12">
-        <div className="max-w-6xl mx-auto text-center mb-24">
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8">Contactez-nous</h2>
-          <p className="text-2xl lg:text-3xl text-gray-300 leading-relaxed">
+    <section id="contact" className="py-16 sm:py-20 md:py-28 lg:py-40 bg-[#0a0a0a]">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="max-w-6xl mx-auto text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8">Contactez-nous</h2>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-300 leading-relaxed px-4">
             Prêt à donner vie à votre prochain projet vidéo ? Parlons-en !
           </p>
         </div>
 
-        <div className="bg-[#1a1a2e] rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto">
+        <div className="bg-[#1a1a2e] rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="bg-primary text-white p-16 lg:p-20">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-8">Informations de contact</h3>
+            <div className="bg-primary text-white p-6 sm:p-10 md:p-12 lg:p-16 xl:p-20">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8">Informations de contact</h3>
               
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-highlight/20 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 bg-highlight/20 p-2 sm:p-3 rounded-lg">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="font-semibold">Adresse</h4>
-                    <p className="text-primary-100">123 Rue de la Création<br />75000 Paris, France</p>
+                  <div className="ml-3 sm:ml-4">
+                    <h4 className="font-semibold text-sm sm:text-base">Adresse</h4>
+                    <p className="text-primary-100 text-sm sm:text-base">123 Rue de la Création<br />75000 Paris, France</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-highlight/20 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 bg-highlight/20 p-2 sm:p-3 rounded-lg">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="font-semibold">Téléphone</h4>
-                    <p className="text-primary-100">+33 1 23 45 67 89</p>
+                  <div className="ml-3 sm:ml-4">
+                    <h4 className="font-semibold text-sm sm:text-base">Téléphone</h4>
+                    <p className="text-primary-100 text-sm sm:text-base">+33 1 23 45 67 89</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-highlight/20 p-3 rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 bg-highlight/20 p-2 sm:p-3 rounded-lg">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="font-semibold">Email</h4>
-                    <p className="text-primary-100">contact@spacecowboyprod.com</p>
+                  <div className="ml-3 sm:ml-4">
+                    <h4 className="font-semibold text-sm sm:text-base">Email</h4>
+                    <p className="text-primary-100 text-sm sm:text-base">contact@spacecowboyprod.com</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12">
-                <h4 className="font-semibold mb-4">Suivez-nous</h4>
-                <div className="flex space-x-4">
+              <div className="mt-8 sm:mt-10 md:mt-12">
+                <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Suivez-nous</h4>
+                <div className="flex space-x-3 sm:space-x-4">
                   {[
                     { name: 'Facebook', icon: 'facebook', url: '#' },
                     { name: 'Instagram', icon: 'instagram', url: '#' },
@@ -73,11 +73,11 @@ export default function Contact() {
                     <a 
                       key={social.name}
                       href={social.url}
-                      className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-highlight transition-colors"
+                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-highlight transition-colors"
                       aria-label={social.name}
                     >
                       <span className="sr-only">{social.name}</span>
-                      <div className="w-5 h-5" dangerouslySetInnerHTML={{
+                      <div className="w-4 h-4 sm:w-5 sm:h-5" dangerouslySetInnerHTML={{
                         __html: getSocialIcon(social.icon)
                       }} />
                     </a>
@@ -86,10 +86,10 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-16 lg:p-20 bg-[#16213e]">
-              <form onSubmit={handleSubmit} className="space-y-10">
+            <div className="p-6 sm:p-10 md:p-12 lg:p-16 xl:p-20 bg-[#16213e]">
+              <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 md:space-y-10">
                 <div>
-                  <label htmlFor="name" className="block text-lg font-semibold text-gray-200 mb-3">
+                  <label htmlFor="name" className="block text-sm sm:text-base md:text-lg font-semibold text-gray-200 mb-2 sm:mb-3">
                     Votre nom
                   </label>
                   <input
@@ -97,13 +97,13 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-6 py-5 rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-lg"
+                    className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-4 md:py-5 rounded-lg sm:rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-sm sm:text-base md:text-lg"
                     placeholder="Jean Dupont"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-lg font-semibold text-gray-200 mb-3">
+                  <label htmlFor="email" className="block text-sm sm:text-base md:text-lg font-semibold text-gray-200 mb-2 sm:mb-3">
                     Votre email
                   </label>
                   <input
@@ -111,13 +111,13 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-6 py-5 rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-lg"
+                    className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-4 md:py-5 rounded-lg sm:rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-sm sm:text-base md:text-lg"
                     placeholder="jean@exemple.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-lg font-semibold text-gray-200 mb-3">
+                  <label htmlFor="subject" className="block text-sm sm:text-base md:text-lg font-semibold text-gray-200 mb-2 sm:mb-3">
                     Sujet
                   </label>
                   <input
@@ -125,29 +125,29 @@ export default function Contact() {
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-6 py-5 rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-lg"
+                    className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-4 md:py-5 rounded-lg sm:rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-sm sm:text-base md:text-lg"
                     placeholder="À propos de mon projet vidéo"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-lg font-semibold text-gray-200 mb-3">
+                  <label htmlFor="message" className="block text-sm sm:text-base md:text-lg font-semibold text-gray-200 mb-2 sm:mb-3">
                     Votre message
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows={6}
+                    rows={5}
                     required
-                    className="w-full px-6 py-5 rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-lg resize-none"
+                    className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-4 md:py-5 rounded-lg sm:rounded-xl border-2 border-gray-600 bg-[#1a1a2e] text-white focus:ring-2 focus:ring-highlight focus:border-highlight transition-all text-sm sm:text-base md:text-lg resize-none"
                     placeholder="Dites-nous en plus sur votre projet..."
                   ></textarea>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-2 sm:pt-4">
                   <button
                     type="submit"
-                    className="w-full bg-highlight text-white py-6 px-8 rounded-xl font-bold text-xl hover:bg-opacity-90 transition-all transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-highlight/50 shadow-lg"
+                    className="w-full bg-highlight text-white py-4 sm:py-5 md:py-6 px-6 sm:px-8 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg md:text-xl hover:bg-opacity-90 transition-all transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-highlight/50 shadow-lg"
                   >
                     Envoyer le message
                   </button>
