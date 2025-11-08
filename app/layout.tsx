@@ -1,20 +1,25 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Space Cowboy Productions",
-  description: "Official website of Space Cowboy Productions",
+  title: "Space Cowboy Production - Création vidéo professionnelle avec IA",
+  description: "Découvrez Space Cowboy Production, votre partenaire en création vidéo professionnelle alliant expertise humaine et intelligence artificielle pour des résultats exceptionnels.",
+  keywords: "vidéo, production, IA, intelligence artificielle, entreprise, documentaire, événementiel, motion design",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1a1a2e",
 };
 
 export default function RootLayout({
@@ -23,11 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="fr" className="scroll-smooth bg-[#0a0a0a]">
+      <body className={`${inter.variable} font-sans bg-[#0a0a0a] text-white antialiased`}>
+        <Header />
+        <main className="bg-[#0a0a0a]">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
