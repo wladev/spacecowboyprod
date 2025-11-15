@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [opacity, setOpacity] = useState(1);
+  const [opacity, setOpacity] = useState(2);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +14,7 @@ export default function Hero() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial call to set opacity based on initial scroll position
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -21,35 +22,34 @@ export default function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Vidéo de fond */}
       <div 
-        className="absolute inset-0 w-full h-full"
-        style={{
-          opacity,
-          transition: 'opacity 0.1s ease-out',
-        }}
-      >
-        {/* Fond de secours avec gradient si la vidéo n'est pas disponible */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent" />
-        
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            // Cache la vidéo si elle ne charge pas
-            e.currentTarget.style.display = 'none';
-          }}
-        >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
+  className="absolute inset-0 w-full h-full"
+  style={{
+    opacity,
+    transition: 'opacity 0.1s ease-out',
+  }}
+>
+  {/* La vidéo doit être au fond */}
+  <video
+    ref={videoRef}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source src="/videos/hero-background.mp4" type="video/mp4" />
+  </video>
+
+  {/* Gradient fallback en dessous mais visible si vidéo KO */}
+  <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent z-[-1]" />
+
+  {/* Voile par-dessus */}
+  <div className="absolute inset-0 bg-black/40 z-10" />
+</div>
 
       {/* Contenu du héros */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-            <img src="/images/logo.png" alt="Space Cowboy Production" className="h-32 sm:h-40 md:h-48 lg:h-60 w-auto mx-auto mt-20 sm:mt-32 md:mt-48 lg:mt-60" />
+            <img src="/images/logo.png" alt="Space Cowboy Production" className="lg:h-120 lg:w-120 mx-auto opacity-80" />
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 mt-6 sm:mt-8 md:mt-10 leading-tight">
           Des vidéos qui racontent votre histoire
@@ -74,11 +74,11 @@ export default function Hero() {
       </div>
 
       {/* Indicateur de défilement */}
-      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2">
+      {/* <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="animate-bounce w-6 h-10 sm:w-7 sm:h-12 md:w-8 md:h-14 border-2 sm:border-3 md:border-4 border-white rounded-full flex justify-center">
           <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full mt-1.5 sm:mt-2" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
