@@ -44,7 +44,7 @@ export default function Portfolio() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-16 sm:py-20 md:py-28 lg:py-40 bg-[#0a0a0a]">
+    <section id="portfolio" className="py-16 sm:py-20 md:py-28 lg:py-40 bg-[#0a0a0a] sm:mt-20">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8">Notre Portfolio</h2>

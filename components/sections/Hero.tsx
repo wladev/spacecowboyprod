@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative  flex items-center justify-center overflow-hidden max-md:py-20">
       {/* Vidéo de fond */}
       <div 
   className="absolute inset-0 w-full h-full"
